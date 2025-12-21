@@ -1,6 +1,6 @@
 import asyncio
 import pytest
-from retryme import retry
+from retrymax import retry
 
 
 def test_retry_succeeds_after_failures():

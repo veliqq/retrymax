@@ -24,12 +24,12 @@ def retry(
                     except exceptions as e:
                         last_exception = e
                         if verbose:
-                            print(f"[retryme] Attempt {attempt + 1} failed: {e}")
+                            print(f"[retrymax] Attempt {attempt + 1} failed: {e}")
                         if on_retry:
                             try:
                                 on_retry(e, attempt + 1)
                             except Exception as hook_error:
-                                print(f"[retryme] on_retry callback error: {hook_error}")
+                                print(f"[retrymax] on_retry callback error: {hook_error}")
 
                         if attempt < times - 1:
                             if current_delay > 0:
@@ -53,12 +53,12 @@ def retry(
                     except exceptions as e:
                         last_exception = e
                         if verbose:
-                            print(f"[retryme] Attempt {attempt + 1} failed: {e}")
+                            print(f"[retrymax] Attempt {attempt + 1} failed: {e}")
                         if on_retry:
                             try:
                                 on_retry(e, attempt + 1)
                             except Exception as hook_error:
-                                print(f"[retryme] on_retry callback error: {hook_error}")
+                                print(f"[retrymax] on_retry callback error: {hook_error}")
 
                         if attempt < times - 1:
                             if current_delay > 0:
