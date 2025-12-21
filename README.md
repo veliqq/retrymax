@@ -1,4 +1,4 @@
-# retryme
+# retrymax
 
 Tiny retry decorator for Python, works for **sync and async functions**, with optional verbose output and callback hooks.
 
@@ -7,7 +7,7 @@ Tiny retry decorator for Python, works for **sync and async functions**, with op
 ## Installation
 
 ```bash
-pip install retryme
+pip install retrymax
 ```
 
 ---
@@ -27,7 +27,7 @@ pip install retryme
 ### Synchronous example
 
 ```python
-from retryme import retry
+from retrymax import retry
 
 @retry(times=3, delay=1, verbose=True)
 def fetch_data():
@@ -44,11 +44,11 @@ except ValueError:
 
 ```
 Trying to fetch data...
-[retryme] Attempt 1 failed: Failed!
+[retrymax] Attempt 1 failed: Failed!
 Trying to fetch data...
-[retryme] Attempt 2 failed: Failed!
+[retrymax] Attempt 2 failed: Failed!
 Trying to fetch data...
-[retryme] Attempt 3 failed: Failed!
+[retrymax] Attempt 3 failed: Failed!
 All retries failed!
 ```
 
@@ -58,7 +58,7 @@ All retries failed!
 
 ```python
 import asyncio
-from retryme import retry
+from retrymax import retry
 
 @retry(times=3, delay=0.5, verbose=True)
 async def fetch_async():
@@ -78,11 +78,11 @@ asyncio.run(main())
 
 ```
 Trying async fetch...
-[retryme] Attempt 1 failed: Async fail!
+[retrymax] Attempt 1 failed: Async fail!
 Trying async fetch...
-[retryme] Attempt 2 failed: Async fail!
+[retrymax] Attempt 2 failed: Async fail!
 Trying async fetch...
-[retryme] Attempt 3 failed: Async fail!
+[retrymax] Attempt 3 failed: Async fail!
 All async retries failed!
 ```
 
@@ -91,7 +91,7 @@ All async retries failed!
 ### Using a callback hook
 
 ```python
-from retryme import retry
+from retrymax import retry
 
 def my_callback(exception, attempt):
     print(f"[callback] Retry {attempt} failed: {exception}")
@@ -111,13 +111,13 @@ except ValueError:
 
 ```
 Attempting fetch with callback...
-[retryme] Attempt 1 failed: Failed again!
+[retrymax] Attempt 1 failed: Failed again!
 [callback] Retry 1 failed: Failed again!
 Attempting fetch with callback...
-[retryme] Attempt 2 failed: Failed again!
+[retrymax] Attempt 2 failed: Failed again!
 [callback] Retry 2 failed: Failed again!
 Attempting fetch with callback...
-[retryme] Attempt 3 failed: Failed again!
+[retrymax] Attempt 3 failed: Failed again!
 [callback] Retry 3 failed: Failed again!
 All retries failed with callback!
 ```
