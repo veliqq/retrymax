@@ -1,12 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "retryme"
 version = "0.1.0"
-description = "Tiny retry decorator for Python"
-authors = [{ name="veliqq" }]
+description = "Tiny retry decorator for sync and async Python functions"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text="MIT" }
+license = { text = "MIT" }
+authors = [
+  { name = "veliqq", email = "veliqorg@proton.me" }
+]
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+dependencies = []
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/veliqq/retryme"
+Repository = "https://github.com/veliqq/retryme"
