@@ -1,4 +1,5 @@
 # retryme
+<<<<<<< HEAD
 
 Tiny retry decorator for Python, works for **sync and async functions**, with optional verbose output and callback hooks.
 
@@ -147,3 +148,6 @@ MIT License
 * Supports both synchronous and asynchronous functions
 * Safe and consistent retry behavior
 * Perfect for network calls, flaky APIs, or any operation that may fail intermittently
+=======
+Tiny retry decorator for Python, works for sync and async functions, with optional verbose output and callback hooks.
+>>>>>>> ee79d23704603d0519fa696281dc5e871bbad3fa
