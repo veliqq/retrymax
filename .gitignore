@@ -10,7 +10,7 @@ __pycache__/
 # =========================
 dist/
 build/
-*.egg-info/
+retryme.egg-info/
 .eggs/
 
 # =========================
