@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-retryme/__init__.py
-retryme/retry.py
-retryme.egg-info/PKG-INFO
-retryme.egg-info/SOURCES.txt
-retryme.egg-info/dependency_links.txt
-retryme.egg-info/top_level.txt
